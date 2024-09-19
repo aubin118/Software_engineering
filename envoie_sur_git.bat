@@ -4,5 +4,5 @@ git add *
 git status
 pause
 git commit -m "commentaire"
-git push origine test_controle
+git push origin code_testing
 pause
