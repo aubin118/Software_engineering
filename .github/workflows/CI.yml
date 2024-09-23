@@ -6,6 +6,7 @@ on:
 
 env:
   BUILD_TYPE: Release
+
 jobs:
 
   build:
