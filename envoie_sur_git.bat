@@ -1,8 +1,8 @@
 git status
 pause
-git add *
+git add .
 git status
 pause
-git commit -m "realisation du test surles actions de git"
+git commit -m "actionsgit"
 git push origin testgit
 pause
