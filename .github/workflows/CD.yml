@@ -21,6 +21,6 @@ jobs:
         - name: Upload
           uses: softprops/action-gh-release@v1
           with:
-                files: "build/*.tar.gz"
+              files: "build/*.tar.gz"
           env:
-                GITHUB_TOKEN: ${{ secrets.TOKEN }}
+              GITHUB_TOKEN: ${{ secrets.TOKEN }}
