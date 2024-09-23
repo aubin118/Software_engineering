@@ -1,7 +1,9 @@
 name: CI
 on:
     push:
+
         branches: ["main"]
+
 env:
     BUILD_TYPES: Release
 jobs:
@@ -10,7 +12,8 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - name: Configure CMake
-                run:|
+
+                run: |
                     mkdir build
                     cd build
                     cmake -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} ..
