@@ -10,7 +10,6 @@ jobs:
         steps:
         - uses: actions/checkout@v4
         - name: Generate package
-
           run: |
             mkdir -p build
             cd build
@@ -25,3 +24,4 @@ jobs:
             files: "build/*.tar.gz"
           env:
             GITHUB_TOKEN: ${{ secrets.TOKEN }}
+
