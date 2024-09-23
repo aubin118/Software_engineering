@@ -10,7 +10,7 @@ jobs:
         steps:
         - uses: actions/checkout@v4
         - name: Generate package
-            run:|
+            run: |
                 mkdir -p build
                 cd build
                 version="${GITHUB_REF##*/*/}"
