@@ -3,7 +3,7 @@
 name: CMake on multiple platforms
 
 on:
-  
+
   pull_request:
     branches: [ "main" ]
 
@@ -24,8 +24,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest]
         build_type: [Release]
-        
-        
+
     steps:
     - uses: actions/checkout@v4
 
@@ -34,7 +33,7 @@ jobs:
       id: strings
       shell: bash
       run: |
-      
+
         echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
 
     - name: Configure CMake
@@ -42,11 +41,13 @@ jobs:
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
       run: >
         cmake -B ${{ steps.strings.outputs.build-output-dir }}
+
         -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
         -DHELLOWORLD_WITH_EXECUTABLES="OFF"
         -DHELLOWORLD_WITH_TESTS="ON"
         -S ${{ github.workspace }}
         
+
 
     - name: Build
       # Build your program with the given configuration. Note that --config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
