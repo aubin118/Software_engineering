@@ -43,8 +43,8 @@ jobs:
       run: >
         cmake -B ${{ steps.strings.outputs.build-output-dir }}
         -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
-        -DHELLOWORLD_WITH_EXECUTABLES="OFF"
-        -DHELLOWORLD_WITH_TESTS="ON"
+        -DHELLOWORD_WITH_EXECUTABLES="OFF"
+        -DHELLOWORD_WITH_TESTS="ON"
         -S ${{ github.workspace }}
         
 
