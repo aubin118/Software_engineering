@@ -5,7 +5,7 @@ on:
     branches: ["main"]
 
 env:
-  BUILD_TYPES: Release
+  BUILD_TYPE: Release
 jobs:
 
   build:
