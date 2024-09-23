@@ -16,4 +16,3 @@ on:
                     cmake -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} ..
                     cmake --build . --config ${{env.BUILD_TYPE}}
                     ctest -C ${{env.BUILD_TYPE}}
-
